@@ -1,0 +1,77 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Toxicity Analyzer Pro</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<div class="container">
+
+<h1>⚪ Lifestyle Chemical Toxicity Analyzer</h1>
+<p class="sub">Scientific Premium Dashboard</p>
+
+<div class="card">
+
+<input type="number" id="age" min="1" placeholder="🎂 Age">
+<input type="number" id="smoke" min="0" placeholder="🚬 Cigarettes / day">
+<input type="number" id="alcohol" min="0" placeholder="🍺 Alcohol / week">
+<input type="number" id="junk" min="0" placeholder="🍔 Junk meals / week">
+<input type="number" id="soft" min="0" placeholder="🥤 Soft drinks / week">
+<input type="number" id="snacks" min="0" placeholder="🍟 Packaged snacks / week">
+<input type="number" id="water" min="0" placeholder="💧 Water liters / day">
+<input type="number" id="exercise" min="0" placeholder="🏃 Exercise mins / day">
+
+<p id="error"></p>
+
+<button onclick="analyze()">Analyze</button>
+
+</div>
+
+<div class="card">
+<h2 id="score">Toxicity Score: --</h2>
+<h3 id="risk">Risk Level: --</h3>
+<div class="meter"><div id="fill"></div></div>
+</div>
+
+<div class="grid">
+
+<div class="card">
+<h3>🫀 Organ Age</h3>
+<p id="organAge">--</p>
+</div>
+
+<div class="card">
+<h3>💸 Monthly Waste</h3>
+<p id="money">--</p>
+</div>
+
+<div class="card">
+<h3>🧬 DNA Damage</h3>
+<p id="dna">--</p>
+</div>
+
+<div class="card">
+<h3>🤖 AI Report</h3>
+<p id="report">--</p>
+</div>
+
+</div>
+
+<div class="card">
+<canvas id="barChart"></canvas>
+</div>
+
+<div class="card">
+<canvas id="radarChart"></canvas>
+</div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
